@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+.header-fixed {
+	background-color:#292c2f;
+	
+	padding: 20px 40px;
+	height: 80px;
+	color: #ffffff;
+	box-sizing: border-box;
+	top:-100px;
+
+	-webkit-transition:top 0.3s;
+	transition:top 0.3s;
+}
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder{
+	height: 80px;
+	display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+	float: left;
+	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+	color: #5383d3;
+}
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+	font:16px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+}
+
+.header-fixed .header-limiter nav a{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover{
+	opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+	color: #ffffff;
+	pointer-events: none;
+	opacity: 1;
+}
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+	display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+	line-height: 28px;
+	font-size: 13px;
+}
+
+
+.pas{
+	align-items: center;
+	margin: 100px;
+	text-align: center;
+}
+.heading_head1{
+	color: #292c2f;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+	.header-fixed {
+		padding: 20px 0;
+		height: 75px;
+	}
+
+	.header-fixed .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header-fixed .header-limiter nav {
+		line-height: 1;
+		float:none;
+	}
+
+	.header-fixed .header-limiter nav a {
+		font-size: 13px;
+	}
+
+	body.fixed .header-fixed {
+		display: none;
+	}
+
+}
+
+/*
+	 We are clearing the body's margin and padding, so that the header fits properly.
+	 We are also adding a height to demonstrate the scrolling behavior. You can remove
+	 these styles.
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Fredoka One', cursive;
+  background-image: linear-gradient(to right, #41f804, #ffff6f);
+  color: #fff;
+}
+
+.container{
+  width: 1280px;
+  margin: auto;
+  
+  
+}
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 70px;
+  padding: 0 20px;
+}
+
+#header h2{font-size: 2rem;}
+
+.user_input{
+  margin-top: 2px;
+  width: 350px;
+  text-align: center;
+}
+
+.user_input input{
+  width: 75%;
+  outline: none;
+  padding: 8px;
+  border: 1px solid lightgray;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+}
+
+.user_input input:focus{
+  box-shadow: 0 0 5px #E22865;
+  border: 1px solid #E22865;
+}
+
+.user_input button{
+  cursor: pointer;
+  padding: 8px;
+  width: fit-content;
+  color: black;
+  transition: 1s;
+  outline: none;
+  background-color: lightgray;
+  border: 1px solid lightgray;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.user-input button:hover{
+  background-color: transparent;
+  color: white;
+}
+
+#to_do_list{
+  width: 900px;
+  margin: auto;
+}
+
+.item{
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  padding: 1rem;
+  color: #454545;
+  margin-top:10px;
+  font-size: 1rem;
+  background-color: white;
+  border: 1px solid lightgray;
+  text-transform: uppercase;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+}
+
+.item:hover{
+  box-shadow: 0 0 20px #E22865;
+  border: 1px solid #E22865;
+}
+
+.item i{
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+@media(max-width:1280px){
+  .container{width: 100%;}
+}
+
+@media(max-width:768px){
+  .container{width: 95%;}
+  
+  #header{
+    padding: 20px;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #header h2{margin: 10px 0;}
+
+  .user_input{width: 100%;}
+
+  #to_do_list{width: 100%;}
+}
+
+@media(max-width:480px){
+  .user_input input{width: 74%;}
+}
+
+@media(max-width:320px){
+  .user_input input{width: 60%;}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+.footer-container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+/* ===== FOOTER =====*/
+.footer{
+	margin-top: 150px;
+	background-color: var(--second-color);
+	color: rgb(58, 57, 57);
+	text-align: center;
+	font-weight: var(--font-semi);
+	padding: 2rem 0;
+  }
+  .footer__title{
+	font-size: 2rem;
+	margin-bottom: var(--mb-4);
+  }
+  .footer__social{
+	margin-bottom: var(--mb-4);
+	color: #292c2f;
+  }
+  .footer__icon{
+	background-color: #5383d3;
+	font-size: 1.5rem;
+	color: #fff;
+	margin: 0 var(--mb-2)
+  }
+

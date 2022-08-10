@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="shortcut icon" type="image/png" href="list.png" />
+  <link rel="stylesheet" href="a.css">
+  <title>To-do List</title>
+</head>
+<body>
+  <div class="main-container">
+
+  
+    <div>
+      
+        <div class="main">
+          
+           <div class="pas" id="pas" style="display:block">
+             <div>
+              <h2><i class="fas fa-clipboard-check"></i> To-do List</h2>
+                <h1 class="heading_head1">Please Enter Your Pin</h1>
+            </div>
+                    <div id="pinDiv" style="display:;">
+                      
+                          <input type="password" id="pin1" placeholder="" class="pin" maxlength="4"/>
+                          <button class="btnOK" id="btnEnter">Enter</button>
+                     </div>
+                     <br>
+                  <div class="trans"><h3 id="pinMsg" class="heading head1" style="color:red"></h3></div>
+       
+              
+                 </div>
+ 
+                 <div class="buttons" style="display:none" id="btnsSecreen">
+  <header class="header-fixed">
+
+        <div class="header-limiter">
+    
+            <h1><a href="#">Group-17<span>Web Dev</span></a></h1>
+    
+            <nav>
+                <a href="#">Home</a>
+                <a href="#" class="selected">Blog</a>
+                <a href="#">Pricing</a>
+                <a href="#">About</a>
+                <a href="#">Faq</a>
+                <a href="#">Contact</a>
+            </nav>
+    
+        </div>
+    
+    </header>
+    
+    <!-- You need this element to prevent the content of the page from jumping up -->
+    <div class="header-fixed-placeholder"></div>
+
+
+
+
+  <main>
+    <header>
+      <div class="container">
+        <div id="header">
+          <h2><i class="fas fa-clipboard-check"></i> To-do List</h2>
+          <div class="user_input">
+            <input type="text" id="input" placeholder="I need to...,Category...,Time...."><button id="add_item">Submit</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <section>
+      <div class="container">
+        <div id="to_do_list"></div>
+      </div>
+    </section>
+  </main>  
+
+ <!--===== FOOTER =====-->
+ <footer class="footer">
+  <p class="footer__title">Group-17 Web Dev PLP</p>
+  <div class="footer__social">
+      <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+      <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+      <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+  </div>
+  <p>&#169; 2022 copyright all right reserved</p>
+</footer>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+	$(document).ready(function(){
+
+		var showHeaderAt = 150;
+
+		var win = $(window),
+				body = $('body');
+
+		// Show the fixed header only on larger screen devices
+
+		if(win.width() > 400){
+
+			// When we scroll more than 150px down, we set the
+			// "fixed" class on the body element.
+
+			win.on('scroll', function(e){
+
+				if(win.scrollTop() > showHeaderAt) {
+					body.addClass('fixed');
+				}
+				else {
+					body.removeClass('fixed');
+				}
+			});
+
+		}
+
+	});
+
+</script>
+
+  <script src="a.js"></script>
+</body>
+
+</html>
